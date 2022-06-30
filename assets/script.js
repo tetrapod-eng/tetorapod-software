@@ -34,7 +34,6 @@ const button = document.getElementById("button");
                         // deviceorientationが有効化される
                         window.addEventListener("devicemotion", handleDeviceMotion);
                     }
-                    alert(response);
                 }).catch(function(e){
                     alert(e);
                 });
@@ -51,7 +50,7 @@ const button = document.getElementById("button");
         c.fillRect(0,0,w,h);
 
         if (buf.length>=2){
-            for(let seq=0;seq<4;seq++){
+            for(let seq=0;seq<3;seq++){
                 c.strokeStyle = penColor[seq];
                 c.beginPath();
                 let y0 = ofsY[seq]*h;
