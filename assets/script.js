@@ -4,7 +4,6 @@ const button = document.getElementById("button");
     const w = canvas.width;
     const h = canvas.height;
 
-    // window.addEventListener("devicemotion", handleDeviceMotion);
     window.addEventListener('load', init);
 
     let ax=0;
@@ -33,7 +32,7 @@ const button = document.getElementById("button");
                     // リクエストが許可されたら
                     if(response === "granted"){
                         // deviceorientationが有効化される
-                        alert(response);
+                        window.addEventListener("devicemotion", handleDeviceMotion);
                     }
                     alert(response);
                 }).catch(function(e){
